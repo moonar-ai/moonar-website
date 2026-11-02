@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ProductHero } from "@/components/products/product-hero";
 import { ProductProblem } from "@/components/products/product-problem";
+import { ProductVideo } from "@/components/products/product-video";
 import { ProductWorkflow } from "@/components/products/product-workflow";
 import { ProductIo } from "@/components/products/product-io";
 import { ProductModules } from "@/components/products/product-modules";
@@ -9,7 +10,7 @@ import { ProductDetails } from "@/components/products/product-details";
 import { ProductCrossLinks } from "@/components/products/product-cross-links";
 import { FinalCta } from "@/components/home/final-cta";
 import { ImageHeroVisual } from "@/components/ui/image-hero-visual";
-import { products } from "@/lib/site-config";
+import { designerSuitePromoVideo, products } from "@/lib/site-config";
 import { productContent } from "@/lib/product-content";
 
 const product = products.find((item) => item.id === "taire-designer-suite")!;
@@ -34,6 +35,12 @@ export default function TaireDesignerSuitePage() {
             alt="Cutaway tyre illustration transitioning into a technical wireframe, representing tAIre Designer Suite"
           />
         }
+      />
+      <ProductVideo
+        title="tAIre Designer Suite in action"
+        description="A short walkthrough of the mould and section design workflow."
+        src={designerSuitePromoVideo.src}
+        poster={designerSuitePromoVideo.poster}
       />
       <ProductProblem {...content.problem} />
       <ProductWorkflow steps={[...content.workflow]} />

@@ -161,3 +161,8 @@ export const products = [
     modules: [],
   },
 ] as const;
+
+// Launch promo video (1920x1080). Set `src` once the final file is in /public/products.
+export const designerSuitePromoVideo: { src?: string; poster?: string } = {
+  src: "/products/taire-designer-suite-launch.mp4",
+};
